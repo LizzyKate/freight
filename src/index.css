@@ -1,13 +1,709 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #80808040;
+}
+
+
+/* nav */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 32px;
+  width: 100%;
+  background-color: royalblue;
+  position: fixed;
+  z-index: 1000;
+}
+
+.first {
+  display: flex;
+  width: 50%;
+
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-size: 14px;
+  color: white;
+  width: 20%;
+  text-decoration: none;
+}
+
+.search {
+  flex-grow: 1;
+  position: relative;
+}
+
+.search input {
+  border-radius: 2px;
+  width: 100%;
+  background-color: #87ceeb4d;
+  border: none;
+  padding: 2px 16px;
+  color: #ffffff9e;
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+.search input::placeholder {
+  color: #ffffff9e;
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+.search input:focus {
+  outline: none;
+  border: none;
+}
+
+.icon {
+  position: absolute;
+  top: 6px;
+  right: 16px;
+}
+
+.icon i {
+  color: white;
+  font-size: 12px;
+}
+
+.second {
+  width: 50%;
+  justify-content: end;
+  display: flex;
+  align-items: center;
+}
+
+.quote,
+.book {
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+.quote {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.book {
+  margin-left: 32px;
+  border: none;
+  background-color: #32cd32;
+}
+
+/* nav */
+
+/* main */
+/* service */
+.back {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.back:focus {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.booking {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.new {
+  margin-left: 51px;
+  width: 85%;
+}
+
+.new h1 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  letter-spacing: 0.01em;
+}
+
+.new p {
+  margin-top: 16px;
+  font-family: 'Inter';
+  color: grey;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.service {
+  margin-top: 32px;
+  background: white;
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.service h2 {
+  font-family: 'Poppins';
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+.all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.air {
+  height: 75px;
+  display: flex;
+  padding-left: 16px;
+  align-items: center;
+  border-radius: 4px;
+  width: 23%;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+  border: 1px solid #80808085;
+}
+
+.active {
+  background-color: #000080;
+  height: 75px;
+  display: flex;
+  padding-left: 16px;
+  align-items: center;
+  border-radius: 4px;
+  width: 23%;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+}
+
+.active h3 {
+  color: white;
+}
+
+.air h3 {
+  color: #808080c7;
+  font-size: 14px;
+  font-family: 'Inter';
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.flight {
+  position: absolute;
+  right: 0;
+  right: -6px;
+  top: 14px;
+  z-index: -50;
+
+}
+
+.flight i {
+  color: #80808085;
+  font-size: 66px;
+
+}
+
+.active-icon i {
+  color: white;
+}
+
+.service:not(:first-child) {
+  margin-top: 16px;
+}
+
+/* service */
+/* 
+import */
+.import {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+
+}
+
+.first-port {
+  width: 16%;
+  display: flex;
+  align-items: center;
+
+}
+
+.second-port {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  background: #80808024;
+  padding: 8px;
+
+}
+
+.imp,
+.exp {
+  border: 0.5px solid #80808085;
+  padding: 4px 12px;
+  color: #808080c7;
+  font-family: 'Inter';
+  cursor: pointer;
+}
+
+.exp {
+  border-left: 0px;
+}
+
+.from {
+  display: flex;
+  width: 15%;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.from div {
+  font-size: 14px;
+  font-family: "Inter";
+}
+
+.custom-select {
+  position: relative;
+  flex-grow: 1;
+  border: none;
+}
+
+
+.select select {
+
+  width: 100%;
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+
+  flex: 1;
+  padding: 0 1em;
+  color: #808080c7;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-size: 14px;
+}
+
+.select select::-ms-expand {
+  display: none;
+}
+
+.select {
+  flex-grow: 1;
+  border: none;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.export {
+  display: flex;
+  margin-top: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-ex {
+  width: 32%;
+  position: relative;
+}
+
+
+input[type="date"]:focus {
+  border: none;
+  outline: none;
+}
+
+.content,
+.cargo {
+  width: 100%;
+  padding: 8px 36px;
+  background: #80808024;
+  border: none;
+  font-family: 'Poppins';
+  font-size: 14px;
+  color: #808080c7;
+}
+
+.content:focus,
+.cargo:focus {
+  border: none;
+  outline: none;
+}
+
+.content::placeholder {
+  font-family: 'Poppins';
+  font-size: 14px;
+  padding-left: 4px;
+  color: #808080c7;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  left: -20px;
+  display: block;
+  position: absolute;
+
+}
+
+.calendar {
+  left: 13px;
+  top: 11px;
+  display: block;
+  position: absolute;
+}
+
+.first-ex select {
+  width: 100%;
+  padding: 8px 16px;
+  background: #80808024;
+  border: none;
+  font-family: 'Poppins';
+  font-size: 14px;
+  width: 100%;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  color: #808080c7;
+}
+
+.first-ex select:focus {
+  outline: none;
+  border: none;
+}
+
+.first-ex select::-ms-expand {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.cargo {
+  padding: 8px 12px !important;
+}
+
+.cargo::placeholder {
+  font-family: 'Poppins';
+  font-size: 14px;
+
+  color: #808080c7;
+}
+
+/* import */
+
+/* cargo */
+.danger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chemical {
+  display: flex;
+  align-items: center;
+}
+.toggle-one, .toggle-two{
+  border: none;
+  background: none;
+  outline: none;
+}
+.toggle-one:focus, .toggle-two:focus{
+  border: none;
+  background: none;
+  outline: none;
+}
+.toggle-one i,
+.toggle-one-service i {
+  color: grey;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.toggle-two i {
+  color: royalblue;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.chemical h3,
+.add h3 {
+  font-family: 'Poppins';
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.total {
+  width: 30%;
+  margin-top: 16px;
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  background: #80808024;
+}
+
+.package {
+  color: #808080c7;
+  font-family: 'Inter';
+  font-size: 14px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dimension {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #808080c7;
+  font-family: 'Inter';
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.volume {
+  width: 40%;
+  margin-top: 32px;
+
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.cool input[type=text] {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #808080c7;
+  color: #808080c7;
+  font-family: 'Poppins';
+  font-size: 14px;
+  clip-path: polygon(0% 1%, 52% 12%, 62% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+
+.cool input[type=text]:focus {
+  outline: none;
+}
+
+.activing {
+  top: -25px;
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
+label {
+  position: absolute;
+  top: 0;
+  margin: 10px;
+  padding: 0 10px;
+  z-index: 50;
+
+}
+
+.cool {
+  position: relative;
+}
+
+.cool:not(:first-child) {
+  margin-left: 32px;
+}
+
+.cool input[type="text"]::placeholder {
+  text-align: right;
+  color: #808080c7;
+  font-family: 'Poppins';
+}
+
+/* cargo */
+
+/* additional */
+.more {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-two-service {
+  display: none;
+}
+
+.forward p {
+  margin-top: 4px;
+}
+
+.forward h3 {
+  margin-left: 0;
+}
+
+.forward {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* additional */
+
+
+@media only screen and (max-width: 800px) {
+  .nav {
+      display: block;
+      padding: 8px 16px;
+  }
+
+  .logo {
+      font-size: 10px;
+  }
+
+  .first {
+      width: 100%;
+
+  }
+
+  .second {
+      width: 100%;
+      margin-top: 16px;
+      justify-content: space-between;
+  }
+
+  .quote,
+  .book {
+      font-size: 12px;
+      padding: 4px 20px;
+  }
+
+  .booking {
+      width: 100%;
+      display: block;
+      padding-top: 112px;
+  }
+
+  .back {
+      margin-bottom: 20px;
+  }
+
+  .back,
+  .new {
+      padding-left: 20px;
+  }
+
+  .new {
+      margin-left: 0;
+      padding-right: 20px;
+      width: 100%;
+  }
+
+  .all {
+      display: block;
+  }
+
+  .air {
+      width: 100%;
+  }
+
+  .air:not(:first-child) {
+      margin-top: 16px;
+  }
+
+  .import {
+      display: block;
+  }
+
+  .second-port {
+      margin-top: 16px;
+      width: 100%;
+  }
+
+  .export {
+      display: block;
+  }
+
+  .first-ex {
+      width: 100%;
+  }
+
+  .first-ex:not(:first-child) {
+      margin-top: 16px;
+  }
+
+  .danger {
+      display: block;
+  }
+
+  .toggle-one i,
+  .toggle-two i {
+      font-size: 14px;
+  }
+
+  .chemical h3 {
+      font-size: 11px;
+  }
+
+  .total {
+      width: 100%;
+  }
+
+  .dimension {
+      padding: 4px 4px;
+  }
+
+  .package {
+      padding: 4px 4px;
+  }
+
+  .volume {
+      width: 100%;
+      display: block;
+  }
+
+  .cool:not(:first-child) {
+      margin-left: 0;
+      margin-top: 32px;
+  }
+
+  .more {
+      display: block;
+  }
+
+  .add:not(:first-child) {
+      margin-top: 24px;
+  }
+}
+
+@media only screen and (max-width:1100px) {
+  .booking {
+      width: 100%;
+  }
 }
