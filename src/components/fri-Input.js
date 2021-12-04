@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 
 
 export default function FrInput(props) {
+    const [inputType, setType] = useState('text')
+
+    const handleType = () => {
+        setType('date')
+    }
     return (
+        
         <>
             {
                 props.type === 'fancy' ?
@@ -12,7 +18,7 @@ export default function FrInput(props) {
                         <input id="fname" type="text" placeholder={props.placeholder} />
                     </div> :
                     <div className="first-ex">
-                        <input type="text" className="content" placeholder={props.placeholder} />
+                        <input type={inputType} className="content" placeholder={props.placeholder} onFocus={handleType} />
                         {!props.icon || <div className="calendar">
                             {props.icon}
                         </div>}
